@@ -109,16 +109,16 @@ class SvatkyTest {
         //arrange
         Svatky svatky = new Svatky();
         String jmeno = "Zikmund";
-        int den = 2;
-        int mesic = 5;
+        int denSvatku = 2;
+        int mesicSvatku = 5;
 
         //act
-        svatky.pridatSvatek(jmeno, den, mesic);
+        svatky.pridatSvatek(jmeno, denSvatku, mesicSvatku);
         MonthDay skutecneDatumSvatku = svatky.kdyMaSvatek(jmeno);
         //assert
         assertNotNull(skutecneDatumSvatku);
-        assertEquals(den, skutecneDatumSvatku.getDayOfMonth());
-        assertEquals(mesic, skutecneDatumSvatku.getMonthValue());
+        assertEquals(denSvatku, skutecneDatumSvatku.getDayOfMonth());
+        assertEquals(mesicSvatku, skutecneDatumSvatku.getMonthValue());
     }
 
     /**
@@ -129,16 +129,16 @@ class SvatkyTest {
         //arrange
         Svatky svatky = new Svatky();
         String jmeno = "Laura";
-        int den = 1;
-        Month mesic = Month.MAY;
+        int denSvatku = 1;
+        Month mesicSvatku = Month.MAY;
 
         //act
-        svatky.pridatSvatek(jmeno, den, mesic);
+        svatky.pridatSvatek(jmeno, denSvatku, mesicSvatku);
         MonthDay skutecneDatumSvatku = svatky.kdyMaSvatek(jmeno);
         //assert
         assertNotNull(skutecneDatumSvatku);
-        assertEquals(den, skutecneDatumSvatku.getDayOfMonth());
-        assertEquals(mesic, skutecneDatumSvatku.getMonth());
+        assertEquals(denSvatku, skutecneDatumSvatku.getDayOfMonth());
+        assertEquals(mesicSvatku, skutecneDatumSvatku.getMonth());
 
         //TODO Otestuje, že je jméno v seznamu svátků a že má přiřazen správný den
     }
@@ -151,14 +151,14 @@ class SvatkyTest {
         //arrange
         Svatky svatky = new Svatky();
         String jmeno = "Tamara";
-        MonthDay den = MonthDay.of(Month.JUNE, 3);
+        MonthDay datumSvatku = MonthDay.of(Month.JUNE, 3);
 
         //act
-        svatky.pridatSvatek(jmeno, den);
+        svatky.pridatSvatek(jmeno, datumSvatku);
         MonthDay skutecneDatumSvatku = svatky.kdyMaSvatek(jmeno);
         //assert
         assertNotNull(skutecneDatumSvatku);
-        assertEquals(den, skutecneDatumSvatku);
+        assertEquals(datumSvatku, skutecneDatumSvatku);
 
     }
 
