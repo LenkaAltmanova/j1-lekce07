@@ -95,11 +95,9 @@ public class Svatky {
      *
      * @param jmeno    Jméno.
      * @param denMesic Den a měsíc, kdy má dané jméno svátek.
-     * @param mesic
      */
     public void pridatSvatek(String jmeno, MonthDay denMesic) {
         svatky.put(jmeno, denMesic);
-//TODO MonthDay.of
     }
 
     /**
